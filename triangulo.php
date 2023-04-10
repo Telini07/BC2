@@ -5,19 +5,18 @@ $a = $val[0];
 $b = $val[1];
 $c = $val[2];
 
-if($a < ($b + $c) && $b < ($a + $c) && $c < ($a + $b))
+if(($a + $b > $c) && ($a + $c > $b) && ($b + $c > $a))
 {
-    $som = $a+$b+$c;
-    $som = number_format(1, ".", "");
-    print("Perimetro = $som\n");
+    $per = $a+$b+$c;
+    $per = number_format($per, 1);
+    print("Perimetro = $per\n");
 }
 else
 {
-    $ans = 0.5*($a+$b)*$c;
-    $ans = number_format(1, ".", "");
-    print("Area = $ans\n");
+    $are = (($a + $b) * $c) / 2;
+    $are = number_format($are, 1);
+    print("Area = $are\n");
     
 }
-
 
 ?>
